@@ -25,15 +25,18 @@ module.exports = {
             options: {
               presets: [
                 [
+                  // プリセットに @babel/preset-env を指定する
                   '@babel/preset-env',
                   {
                     modules: false,
+                    // サポートするブラウザ、この設定に応じて、必要な polyfill のみが import される
                     targets: {
                       edge: '17',
                       firefox: '60',
                       chrome: '67',
                       safari: '11.1'
                     },
+                    // 必要な polyfill のみを import させたい場合、'usage'を指定する（必須）
                     useBuiltIns: 'usage'
                   }
                 ]
