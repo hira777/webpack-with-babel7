@@ -28,7 +28,6 @@ module.exports = {
                   // プリセットに @babel/preset-env を指定する
                   '@babel/preset-env',
                   {
-                    modules: false,
                     // サポートするブラウザ、この設定に応じて、必要な polyfill のみが import される
                     targets: {
                       edge: '17',
